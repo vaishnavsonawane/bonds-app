@@ -1,9 +1,6 @@
 package com.db.grad.bondsapp.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
@@ -14,8 +11,6 @@ import java.util.Date;
 @AllArgsConstructor
 @Table(name = "Security")
 public class Security {
-
-
 
     @Id
     private long securityId;
@@ -37,7 +32,6 @@ public class Security {
     private String status;
 
     @Id
-    @Column(name = "securityId", nullable = false)
     public long getSecurityId() {
         return securityId;
     }
@@ -67,6 +61,14 @@ public class Security {
     }
     public void setType(String type) {
         this.type = type;
+    }
+
+    @Column(name = "issuer")
+    public String getIssuer() {
+        return issuer;
+    }
+    public void setIssuer(String issuer) {
+        this.issuer = issuer;
     }
 
     @Column(name = "faceValue")
