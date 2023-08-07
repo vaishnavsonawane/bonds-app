@@ -12,6 +12,8 @@ public class BondsAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BondsAppApplication.class, args);
+
+
 	}
 
 }
