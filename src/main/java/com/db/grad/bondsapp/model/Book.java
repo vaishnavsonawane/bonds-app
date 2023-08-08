@@ -26,7 +26,7 @@ public class Book {
         this.bookId = id;
     }
 
-    @Column(name = "bookName", nullable = false)
+    @Column(name = "bookName")
     public String getBookName() {
         return bookName;
     }

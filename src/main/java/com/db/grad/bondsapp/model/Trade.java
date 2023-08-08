@@ -28,6 +28,10 @@ public class Trade {
 
     private String status;
 
+    private long price;
+
+    private String buy_sell;
+
     private Date tradeDate;
 
     private Date settlementDate;
@@ -71,6 +75,13 @@ public class Trade {
     public void setQuantity(long quantity) {
         this.quantity = quantity;
     }
+    @Column(name = "price")
+    public long getPrice() {
+        return price;
+    }
+    public void setPrice(long price) {
+        this.price = price;
+    }
 
     @Column(name = "status")
     public String getStatus() {
@@ -78,6 +89,14 @@ public class Trade {
     }
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    @Column(name = "buy_sell")
+    public String getBuy_sell() {
+        return buy_sell;
+    }
+    public void setBuy_sell(String buy_sell) {
+        this.buy_sell = buy_sell;
     }
 
     @Column(name = "tradeDate")

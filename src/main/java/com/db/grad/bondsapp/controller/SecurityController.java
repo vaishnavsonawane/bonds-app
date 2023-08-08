@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/securities")
+@CrossOrigin(origins = "*")
 public class SecurityController {
     @Autowired
     private SecurityService securityService;
