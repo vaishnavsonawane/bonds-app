@@ -46,5 +46,13 @@ public class SecurityService {
              securityRepository.delete(toDelete.get(0));
          }
     }
+    public List<Security> getSecuritiesMaturing(LocalDate localDate) {
+        Date date = Date.valueOf(localDate);
+        return securityRepository.findSecuritiesMaturing(date);
+    }
 
+    public List<Security> getSecuritiesMatured(LocalDate localDate) {
+        Date date = Date.valueOf(localDate);
+        return securityRepository.findSecuritiesMatured(date);
+    }
 }

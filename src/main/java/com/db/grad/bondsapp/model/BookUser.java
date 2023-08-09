@@ -14,6 +14,8 @@ import lombok.NoArgsConstructor;
 public class BookUser {
 
     @Id
+    private long Id;
+
     private long bookId;
     private long userId;
 

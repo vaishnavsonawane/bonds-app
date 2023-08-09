@@ -70,6 +70,21 @@ public class SecurityController {
         securityService.deleteSecurityById(securityId);
 
     }
+    @GetMapping("/get/matured")
+    public ResponseEntity getSecuritiesMatured() {
+
+        LocalDate date = LocalDate.now();
+        List<Security> response = securityService.getSecuritiesMatured(date);
+        return ResponseEntity.ok().body(response);
+    }
+    @GetMapping("/get/maturing")
+    public ResponseEntity getSecuritiesMaturing() {
+
+        LocalDate date = LocalDate.now();
+        List<Security> response = securityService.getSecuritiesMaturing(date);
+        return ResponseEntity.ok().body(response);
+    }
+
     Boolean validateDate(String Date)
     {
         try{

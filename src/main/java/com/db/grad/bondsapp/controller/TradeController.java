@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/trades")
+@CrossOrigin(origins = "*")
 public class TradeController {
     @Autowired
     private TradeService tradeService;
