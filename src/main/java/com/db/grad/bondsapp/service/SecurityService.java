@@ -11,7 +11,6 @@ import java.util.List;
 
 @Service
 public class SecurityService {
-
     @Autowired
     private SecurityRepository securityRepository;
 

@@ -23,7 +23,7 @@ public interface SecurityRepository extends JpaRepository<Security, Long>{
     @Query(value = "SELECT s FROM Security s WHERE ?1 <= s.maturityDate ORDER BY s.maturityDate DESC")
     List<Security> findSecuritiesMaturing(Date date);
 
-    @Query(value = "SELECT COUNT(s) FROM Security s WHERE s.maturityDate < ?1 ORDER BY s.maturityDate DESC")
+    @Query(value = "SELECT s FROM Security s WHERE s.maturityDate < ?1 ORDER BY s.maturityDate DESC")
     List<Security> findSecuritiesMatured(Date date);
 
 }
